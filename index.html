@@ -4,59 +4,162 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BILIK SEWA UITM MACHANG</title>
+<title>Bilik Sewa Pelajar UiTM Machang</title>
 
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial, sans-serif;
 margin:0;
-background:#f2f2f2;
+background:#f4f6f8;
+color:#333;
 }
 
 header{
-background:#7b1fa2;
+background:linear-gradient(135deg,#6a1b9a,#8e24aa);
 color:white;
-padding:40px;
+padding:60px 20px;
 text-align:center;
 }
 
+header h1{
+margin:0;
+font-size:36px;
+}
+
+header p{
+opacity:0.9;
+}
+
 .container{
-width:90%;
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:20px;
 }
 
 .card{
 background:white;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+padding:25px;
+margin-top:25px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-.price{RM130
-font-size:30px;
-color:red;
+.price{
+font-size:26px;
+color:#e53935;
 font-weight:bold;
 }
 
-.whatsapp{+60143145241
+ul{
+line-height:1.8;
+padding-left:20px;
+}
+
+.slider{
+position:relative;
+max-width:100%;
+overflow:hidden;
+border-radius:12px;
+}
+
+.slides{
+display:flex;
+transition:transform 0.5s ease;
+}
+
+.slides img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+button{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:25px;
+padding:10px 15px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+.dots{
+text-align:center;
+margin-top:10px;
+}
+
+.dot{
+height:10px;
+width:10px;
+margin:5px;
+display:inline-block;
+background:#bbb;
+border-radius:50%;
+cursor:pointer;
+}
+
+.active{
+background:#6a1b9a;
+}
+
+.whatsapp{
 display:inline-block;
 background:#25D366;
 color:white;
 padding:15px 25px;
-text-decoration:none;
 border-radius:8px;
+text-decoration:none;
 font-size:18px;
 margin-top:10px;
 }
 
-.gallery img{
-width:100%;
-margin-top:10px;
-border-radius:10px;
+.whatsapp:hover{
+background:#1da851;
+}
+
+.floating-wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:40px;
+background:#222;
+color:white;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:28px;
+}
+
+.slides img{
+height:300px;
+}
+
 }
 
 </style>
@@ -67,10 +170,13 @@ border-radius:10px;
 <header>
 
 <h1>BILIK SEWA PELAJAR UiTM MACHANG</h1>
-<p>Lokasi Strategik • Selesa • Dekat Kampus</p>
-<p>Whatsapp untuk sebarang pertanyaan : 0143145241</p>
+
+<p>Lokasi Strategik • Rumah Selesa • Dekat Kampus</p>
+
+<p>WhatsApp: 014-3145241</p>
 
 </header>
+
 
 <div class="container">
 
@@ -78,56 +184,87 @@ border-radius:10px;
 
 <h2>Harga Sewa</h2>
 
-<p class="price">RM130 / Bulan (Standard room) </p>
+<p class="price">RM130 / Bulan (Standard Room)</p>
 
-  <p class="price">RM180 / Bulan (Master Room)</p>
+<p class="price">RM180 / Bulan (Master Room)</p>
 
 <p>
-Rumah sewa berhampiran UiTM Machang. Newly Renovated!
-Sesuai untuk pelajar.
+Rumah sewa berhampiran UiTM Machang. Sesuai untuk pelajar lelaki atau perempuan.
+Persekitaran selesa, selamat dan lengkap dengan kemudahan asas.
 </p>
 
 </div>
 
+
+
 <div class="card">
 
-<h2>Kemudahan</h2>
+<h2>Kemudahan Rumah</h2>
 
 <ul>
 
-<li>Katil dan Tilam setiap bilik</li>
-<li>Almari Personal</li>
-<li>Meja bonquet study</li>
+<li>Katil dan tilam</li>
+<li>Almari personal</li>
+<li>Meja study</li>
 <li>Android TV</li>
-<li>Mesin Basuh</li>
-<li>Parking Kereta</li>
-<li>Peti Ais</li>
-<li>Wifi (RM68 monthly)</li>
-<li>Dapur</li>
+<li>Mesin basuh</li>
+<li>Peti ais</li>
+<li>Dapur memasak</li>
+<li>Parking kereta</li>
+<li>Wifi (RM68 sebulan)</li>
 
 </ul>
 
 </div>
 
+
+
 <div class="card">
 
 <h2>Gambar Rumah</h2>
 
-<div class="gallery">
+<div class="slider">
 
-<img src="bilik standard 1.jpg">
-<img src="bilik standard 2.jpg">
-<img src="bilik Master.jpg">
+<div class="slides" id="slides">
+
+<img src="rumah1.jpg">
+<img src="rumah2.jpg">
+<img src="rumah3.jpg">
+<img src="rumah4.jpg">
+<img src="rumah5.jpg">
 
 </div>
 
+<button class="prev" onclick="prevSlide()">❮</button>
+<button class="next" onclick="nextSlide()">❯</button>
+
 </div>
+
+<div class="dots" id="dots"></div>
+
+</div>
+
+
 
 <div class="card">
 
-<h2>Hubungi</h2>
+<h2>Lokasi Rumah</h2>
 
-<a class="whatsapp" href="https://wa.me/60143145241">
+<iframe
+<iframe src="https://www.google.com/maps/embed?pb=!4v1772771309733!6m8!1m7!1sei8R2NohscGK2IOtTR-yGA!2m2!1d5.763492632661172!2d102.2812799419498!3f180!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Hubungi Sekarang</h2>
+
+<p>Klik butang WhatsApp untuk bertanya tentang bilik yang masih kosong.</p>
+
+<a class="whatsapp"
+href="https://wa.me/60143145241?text=Saya%20nak%20tanya%20bilik%20sewa%20UiTM%20Machang">
 
 WhatsApp Sekarang
 
@@ -136,6 +273,97 @@ WhatsApp Sekarang
 </div>
 
 </div>
+
+
+
+<a class="floating-wa"
+href="https://wa.me/60143145241?text=Saya%20nak%20tanya%20bilik%20sewa%20UiTM%20Machang">
+
+WhatsApp
+
+</a>
+
+
+
+<footer>
+
+<p>Bilik Sewa Pelajar UiTM Machang</p>
+
+</footer>
+
+
+
+<script>
+
+let index=0;
+
+const slides=document.getElementById("slides");
+
+const images=document.querySelectorAll(".slides img");
+
+const dotsContainer=document.getElementById("dots");
+
+images.forEach((img,i)=>{
+
+let dot=document.createElement("span");
+
+dot.classList.add("dot");
+
+dot.onclick=()=>{
+
+index=i;
+
+showSlide();
+
+};
+
+dotsContainer.appendChild(dot);
+
+});
+
+function showSlide(){
+
+slides.style.transform="translateX("+(-index*100)+"%)";
+
+document.querySelectorAll(".dot").forEach(d=>d.classList.remove("active"));
+
+document.querySelectorAll(".dot")[index].classList.add("active");
+
+}
+
+function nextSlide(){
+
+index++;
+
+if(index>=images.length){
+
+index=0;
+
+}
+
+showSlide();
+
+}
+
+function prevSlide(){
+
+index--;
+
+if(index<0){
+
+index=images.length-1;
+
+}
+
+showSlide();
+
+}
+
+setInterval(nextSlide,4000);
+
+showSlide();
+
+</script>
 
 </body>
 </html>
